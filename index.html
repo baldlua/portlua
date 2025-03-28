@@ -3,139 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio </title>
-    <link rel="stylesheet" href="oi.css"> 
+    <title>Portfólio - Desenvolvedor de Sistemas</title>
+    <link rel="stylesheet" href="oi.css">
+
     <style>
-        * {
+
+/* Resetando estilos básicos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Definindo a fonte e o fundo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Fundo neutro */
     color: #333;
+    line-height: 1.6;
 }
 
+/* Estilo do Header */
 header {
-    background-color: #4CAF50;
+    background-color: rgba(123, 15, 131, 0.678); /* Azul */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(99, 16, 105, 0.678); /* Azul (123, 15, 131, 0.678)ais escuro ao passar o mouse */
 }
 
 header h1 {
+    font-size: 2.5em;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 header p {
     font-size: 1.2em;
+    font-weight: 300;
 }
 
+/* Containers para conteúdo */
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Estilo das seções */
 section {
-    padding: 20px 0;
+    padding: 40px 0;
+}
+
+section:nth-child(even) {
+    background-color: #fff; /* Alternando fundo entre branco e azul */
+}
+
+section:nth-child(odd) {
+    background-color: #e1e4f7;
 }
 
 h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    color: purple;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 ul {
     list-style-type: none;
     padding-left: 0;
+    text-align: center;
 }
 
 ul li {
-    margin: 5px 0;
-    font-size: 1.1em;
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
+/* Estilo dos projetos */
 .projeto {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .projeto h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    color: rgba(123, 15, 131, 0.678);
+    margin-bottom: 15px;
 }
 
+/* Estilo do footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
 }
 
-footer p {
-    font-size: 0.9em;
+footer:hover {
+    background-color: rgba(123, 15, 131, 0.678);
 }
-]
+
+/* Animação no carregamento do site */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .projeto {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+        
     </style>
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="container">
-            <h1>Bem-vindo ao meu Portfólio</h1>
-            <p>Eu sou Luanny, uma desenvolvedora de sistemas.</p>
+            <h1>Meu portifólio.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
+    <!-- Seção Sobre Mim -->
     <section id="sobre">
         <div class="container">
             <h2>Sobre Mim</h2>
-            <p>Olá, sou Luanny Gabriela. Sou uma desenvolvedora de sistemas com experiência em HTML, CSS e JAVA.</p>
-            <p>Programadora apaixonada na profissão e sempre busco novas oportunidades para aprender e crescer.</p>
+            <p>Sou Luanny Gabriela, uma desenvolvedora de sistemas buscando aprender cada dia mais. Tenho experiência em algumas linguagens de programação, como Java, HTML e CSS. Meu objetivo é fornecer soluções de alta qualidade.</p>
         </div>
     </section>
 
+    <!-- Seção Habilidades -->
     <section id="habilidades">
         <div class="container">
             <h2>Habilidades</h2>
             <ul>
-                <li>Proatividade;</li>
-                <li>Boa comunicação;</li>
-                <li>Inglês intermadiário;</li>
-                <li>Criatividade.</li>
+                <li>Desenvolvimento Java (Spring Boot, JavaFX)</li>
+                <li>Desenvolvimento Web (HTML, CSS, JavaScript)</li>
+                <li>Banco de Dados (MySQL, MongoDB)</li>
+                <li>Controle de Versão (Git, GitHub)</li>
             </ul>
         </div>
     </section>
 
+    <!-- Seção Projetos -->
     <section id="projetos">
         <div class="container">
             <h2>Projetos</h2>
             <div class="projeto">
                 <h3>Vivarte</h3>
-                <p>Um site sobre artes brasileiras.</p>
+                <p>Um site sobre as artes brasileiras, para conhecermos cada vez mais sobre.</p>
             </div>
             <div class="projeto">
-                <h3>Daltonismo</h3>
-                <p>Uma aplicação sobre acessibilidade para os daltonicos. </p>
+                <h3>Acessibilidade: Daltonismo</h3>
+                <p>Uma aplicação para melhorar a acessibilidade de sites em geral, para pessoas de um grupo específico, os daltonicos.</p>
             </div>
-            <!-- Adicione mais projetos conforme necessário -->
         </div>
     </section>
 
+    <!-- Seção de Contato -->
     <section id="contato">
         <div class="container">
             <h2>Contato</h2>
-            <p>Email: luanny2142@gmail.com</p>
-            <p>Telefone: (55) 38 9 88244332</p>
-            <p>GitHub: baldlua</p>
+            <p>Você pode me encontrar nas seguintes plataformas:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/seuperfil" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/baldlua" target="_blank">GitHub</a></li>
+                <li><a href="mailto:luaah2142@gmail.com">E-mail</a></li>
+            </ul>
         </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Luanny. Todos os direitos reservados.</p>
+            <p>&copy; 2025 - Luanny Gabriela.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
